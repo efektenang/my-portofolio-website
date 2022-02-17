@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  /*	height: 1440px;*/
+  background: #060606;
+}
+
+header {
+  line-height: 70px;
+  background: #045771;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+/* ========= navigation ============ */
+.nav {
+  color: #ffffff;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  position: sticky;
+  z-index: 12;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav label {
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 70px;
+  margin-right: 0 30%;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.clearfix {
+  clear: both;
+}
+
+nav {
+  margin-left: 30%;
+}
+
+nav ul li {
+  margin-left: 40px;
+  display: inline-block;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+nav a.active,
+nav a:hover {
+  font-weight: bold;
+  text-shadow: 1px 0 10px #fff;
+}
+
+button.menutoggle {
+  display: none;
+  margin-right: 50px;
+  height: 34px;
+  width: 44px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+button.menutoggle:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+button.menutoggle span {
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  display: block;
+  margin: auto;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+button.menutoggle.active span {
+  background-color: transparent;
+}
+
+button.menutoggle span::before,
+button.menutoggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 0.5s ease;
+}
+
+button.menutoggle span::before {
+  transform: translateY(-6px);
+}
+
+button.menutoggle.active span::before {
+  transform: rotate(45deg);
+}
+
+button.menutoggle span::after {
+  transform: translateY(6px);
+}
+
+button.menutoggle.active span::after {
+  transform: rotate(135deg);
+}
+/* ===== Scroll Bar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060606;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #09a4d3;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #045771;
+}
+
+/*======= main =========*/
+
+h1.main {
+  text-align: left;
+  margin-left: 120px;
+  color: #ababab;
+  font-size: 40px;
+  top: 50px;
+  position: relative;
+}
+
+.border {
+  position: relative;
+  width: 200px;
+  height: 0px;
+  top: 55px;
+  margin-left: 120px;
+  background-color: #0086ae;
+  border: 3px solid #0086ae;
+}
+
+article {
+  width: 55%;
+  float: left;
+  margin: 40px 80px;
+  position: relative;
+  top: 70px;
+}
+
+p {
+  width: 764px;
+  font-size: 20px;
+  color: #ababab;
+  margin-top: 30px;
+}
+
+/* ========== Profile (Aside) ============ */
+
+aside {
+  height: 780px;
+  padding: 10px;
+  margin-right: 30px;
+  text-align: center;
+  float: right;
+  width: 30%;
+  color: #ababab;
+  /* background-color: #045771; */
+}
+
+.profile {
+  top: 0;
+  width: 100%;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+table {
+  padding: 10px;
+  margin: 5px auto;
+}
+
+tr,
+td {
+  width: 50%;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.profile img {
+  width: 150px;
+  margin: 20px;
+}
+
+.underline {
+  margin: 5px auto;
+  width: 120px;
+  background-color: #0086ae;
+  border: 2px solid #0086ae;
+}
+
+.profile {
+  box-shadow: 0 0 18px 2px #0086ae, inset 0 0 20px #0086ae;
+  border: 4px solid #0fc7ff;
+  box-sizing: border-box;
+  border-radius: 17px;
+}
+
+/* ====== Footer ========== */
+
+footer {
+  width: 100%;
+  height: 35px;
+  font-weight: none;
+  font-size: 15px;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
+  background: #045771;
+}
+
+/* ========= Responsive ============= */
+
+@media (max-width: 991px) {
+  button.menutoggle {
+    display: block;
+    margin-right: 80px;
+  }
+
+  .nav {
+    height: 100px;
+    position: sticky;
+  }
+
+  .nav label {
+    line-height: 100px;
+    font-size: 30px;
+    padding-left: 10%;
+  }
+
+  nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+
+  nav.open {
+    visibility: visible;
+  }
+
+  nav ul {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: #04587180;
+    backdrop-filter: blur(18px);
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0;
+    transition: all 0.5s ease;
+  }
+
+  nav a {
+    margin-left: 70px;
+    transition: all 0.5s ease;
+  }
+
+  p {
+    width: 90%;
+    font-size: 20px;
+    color: #ababab;
+    margin-top: 30px;
+  }
+
+  aside {
+    float: none;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  article {
+    width: 80%;
+    float: none;
+    margin: 60px auto;
+  }
+
+  article.profile {
+    margin: 0 auto;
+    top: 140px;
+  }
+
+  footer {
+    bottom: -200px;
+    position: relative;
+  }
+}
